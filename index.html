@@ -24,7 +24,7 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 40px 14px 80px;
+    padding: 18px 14px 40px;
     position: relative;
     background: var(--bg);
     overflow-x: hidden;
@@ -51,78 +51,73 @@
     backdrop-filter: blur(18px);
     border: 1px solid var(--card-border);
     border-radius: 999px;
-    padding: 10px 10px 10px 18px;
-    margin-bottom: 28px;
+    padding: 8px 8px 8px 16px;
+    margin-bottom: 14px;
     box-shadow: 0 8px 30px -12px rgba(20,18,43,0.15);
   }
-  .nav-brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.95rem; }
-  .nav-badge { background: var(--ink); color: #fff; font-size: 0.68rem; font-weight: 700; padding: 6px 12px; border-radius: 999px; }
-  .hero { text-align: center; margin-bottom: 26px; }
-  .hero-kicker { font-size: 0.75rem; font-weight: 700; color: var(--violet); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
+  .nav-brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; }
+  .nav-badge { background: var(--ink); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 5px 11px; border-radius: 999px; }
+  .hero { text-align: center; margin-bottom: 14px; }
   .hero h1 {
-    font-size: clamp(2.4rem, 9vw, 3.4rem);
-    font-weight: 800; letter-spacing: -1.5px; line-height: 1.02;
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    font-weight: 800; letter-spacing: -1.2px; line-height: 1;
     background: linear-gradient(100deg, var(--ink) 20%, var(--violet) 55%, var(--mint) 90%);
     background-size: 200% auto;
     -webkit-background-clip: text; background-clip: text; color: transparent;
     animation: shimmer 6s linear infinite;
   }
   @keyframes shimmer { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
-  .hero p { margin-top: 10px; color: var(--muted); font-size: 1rem; font-weight: 500; }
-  .stat-bento { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 10px; margin-bottom: 30px; }
-  .stat-card { background: var(--card); backdrop-filter: blur(18px); border: 1px solid var(--card-border); border-radius: 20px; padding: 16px 14px; box-shadow: 0 8px 24px -14px rgba(20,18,43,0.15); }
-  .stat-num { font-size: 1.6rem; font-weight: 800; display: block; line-height: 1; }
-  .stat-label { font-size: 0.7rem; color: var(--muted); font-weight: 600; margin-top: 4px; display: block; }
-  .section-title { font-size: 0.78rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin: 0 4px 12px; }
-  .cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 28px; }
+  .section-title { font-size: 0.72rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin: 0 4px 8px; }
+  .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-bottom: 14px; }
   .cat-card {
     position: relative; background: var(--card); backdrop-filter: blur(18px);
-    border: 1px solid var(--card-border); border-radius: 22px; padding: 18px 12px 16px;
-    font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.85rem; color: var(--ink);
+    border: 1px solid var(--card-border); border-radius: 16px; padding: 10px 4px 8px;
+    font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.62rem; color: var(--ink);
     cursor: pointer; overflow: hidden; display: flex; flex-direction: column; align-items: center;
-    gap: 8px; text-align: center;
-    transition: transform 0.25s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease;
+    gap: 3px; text-align: center; line-height: 1.15;
+    transition: transform 0.2s cubic-bezier(.2,.8,.2,1), box-shadow 0.2s ease;
     box-shadow: 0 6px 18px -12px rgba(20,18,43,0.12);
   }
-  .cat-card.wide { grid-column: span 2; flex-direction: row; justify-content: center; }
-  .cat-card.wide .cat-emoji { margin-bottom: 0; }
   .cat-glow {
     position: absolute; inset: -40%;
     background: radial-gradient(circle at 50% 20%, var(--g1), var(--g2) 60%, transparent 80%);
     opacity: 0; transition: opacity 0.3s ease; z-index: 0;
   }
   .cat-card span:not(.cat-glow) { position: relative; z-index: 1; }
-  .cat-card:active { transform: scale(0.96); }
-  .cat-card.active { border-color: transparent; box-shadow: 0 12px 30px -10px rgba(124,92,255,0.4); color: #fff; }
+  .cat-card:active { transform: scale(0.94); }
+  .cat-card.active { border-color: transparent; box-shadow: 0 10px 24px -10px rgba(124,92,255,0.4); color: #fff; }
   .cat-card.active .cat-glow { opacity: 1; }
-  .cat-emoji { font-size: 1.8rem; line-height: 1; }
-  .question-shell { position: relative; margin-bottom: 20px; }
+  .cat-emoji { font-size: 1.35rem; line-height: 1; }
+  .question-shell { position: relative; margin-bottom: 14px; }
   .question-card {
     background: linear-gradient(160deg, rgba(255,255,255,0.85), rgba(255,255,255,0.55));
     backdrop-filter: blur(20px); border: 1px solid var(--card-border);
-    border-radius: 28px; padding: 44px 26px; min-height: 170px;
+    border-radius: 24px; padding: 28px 20px; min-height: 120px;
     display: flex; align-items: center; justify-content: center; text-align: center;
-    font-size: clamp(1.15rem, 4.5vw, 1.45rem); font-weight: 700; line-height: 1.5;
-    position: relative; box-shadow: 0 24px 60px -24px rgba(20,18,43,0.25);
+    font-size: clamp(1.05rem, 4.2vw, 1.3rem); font-weight: 700; line-height: 1.4;
+    position: relative; box-shadow: 0 20px 50px -22px rgba(20,18,43,0.25);
   }
   .question-card .cat-tag {
-    position: absolute; top: 18px; left: 22px;
-    font-size: 0.68rem; font-weight: 700; color: var(--violet);
-    background: rgba(124,92,255,0.1); padding: 5px 12px; border-radius: 999px;
+    position: absolute; top: 14px; left: 18px;
+    font-size: 0.64rem; font-weight: 700; color: var(--violet);
+    background: rgba(124,92,255,0.1); padding: 4px 10px; border-radius: 999px;
     text-transform: uppercase; letter-spacing: 0.5px;
   }
   .btn-primary {
     width: 100%; background: linear-gradient(135deg, var(--violet), #5b3fe0);
-    border: none; border-radius: 22px; padding: 19px;
-    font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.05rem; color: #fff;
-    letter-spacing: 0.2px; cursor: pointer; box-shadow: 0 16px 40px -14px rgba(124,92,255,0.55);
+    border: none; border-radius: 18px; padding: 15px;
+    font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1rem; color: #fff;
+    letter-spacing: 0.2px; cursor: pointer; box-shadow: 0 12px 32px -14px rgba(124,92,255,0.55);
     transition: transform 0.15s cubic-bezier(.2,.8,.2,1), box-shadow 0.15s ease;
     display: flex; align-items: center; justify-content: center; gap: 8px;
   }
-  .btn-primary:active { transform: scale(0.97); box-shadow: 0 8px 20px -10px rgba(124,92,255,0.4); }
-  .footer-note { text-align: center; color: var(--muted); font-size: 0.75rem; margin-top: 22px; font-weight: 500; }
-  @keyframes pop { 0% { transform: scale(0.94) translateY(8px); opacity: 0; } 100% { transform: scale(1) translateY(0); opacity: 1; } }
-  .pop { animation: pop 0.4s cubic-bezier(.2,.8,.2,1); }
+  .btn-primary:active { transform: scale(0.97); box-shadow: 0 6px 16px -10px rgba(124,92,255,0.4); }
+  .footer-note { text-align: center; color: var(--muted); font-size: 0.7rem; margin-top: 12px; font-weight: 500; }
+  @keyframes pop { 0% { transform: scale(0.94) translateY(6px); opacity: 0; } 100% { transform: scale(1) translateY(0); opacity: 1; } }
+  .pop { animation: pop 0.35s cubic-bezier(.2,.8,.2,1); }
+  @media (max-width: 420px) {
+    .cat-grid { grid-template-columns: repeat(3, 1fr); }
+  }
 </style>
 </head>
 <body>
@@ -130,17 +125,10 @@
   <div class="app">
     <div class="nav-pill">
       <div class="nav-brand">🤿 Tiefgang</div>
-      <div class="nav-badge">v2.0</div>
+      <div class="nav-badge">v2.1</div>
     </div>
     <div class="hero">
-      <div class="hero-kicker">Fragen-Roulette</div>
       <h1>Tiefgang</h1>
-      <p>Witzig bis abgrundtief — 120 Fragen, nie auslaufend.</p>
-    </div>
-    <div class="stat-bento">
-      <div class="stat-card"><span class="stat-num" id="streakCount">0</span><span class="stat-label">Fragen gestellt</span></div>
-      <div class="stat-card"><span class="stat-num">8</span><span class="stat-label">Kategorien</span></div>
-      <div class="stat-card"><span class="stat-num">∞</span><span class="stat-label">Spaß</span></div>
     </div>
     <div class="section-title">Kategorie wählen</div>
     <div class="cat-grid" id="categories">
@@ -154,7 +142,7 @@
           <span class="cat-emoji">🤪</span>
           <span class="cat-label">Fun & Verrückt</span>
         </button>
-        <button class="cat-card wide" data-cat="waeredu" style="--g1:#f472b6;--g2:#c084fc">
+        <button class="cat-card" data-cat="waeredu" style="--g1:#f472b6;--g2:#c084fc">
           <span class="cat-glow"></span>
           <span class="cat-emoji">🔀</span>
           <span class="cat-label">Würdest du eher</span>
@@ -169,7 +157,7 @@
           <span class="cat-emoji">💬</span>
           <span class="cat-label">Beziehung</span>
         </button>
-        <button class="cat-card wide" data-cat="tiefgruendig" style="--g1:#2dd4bf;--g2:#3b82f6">
+        <button class="cat-card" data-cat="tiefgruendig" style="--g1:#2dd4bf;--g2:#3b82f6">
           <span class="cat-glow"></span>
           <span class="cat-emoji">🌊</span>
           <span class="cat-label">Tiefgründig</span>
@@ -178,11 +166,6 @@
           <span class="cat-glow"></span>
           <span class="cat-emoji">🧠</span>
           <span class="cat-label">Philosophisch</span>
-        </button>
-        <button class="cat-card" data-cat="team" style="--g1:#34d399;--g2:#22d3ee">
-          <span class="cat-glow"></span>
-          <span class="cat-emoji">💼</span>
-          <span class="cat-label">Team & Arbeit</span>
         </button>
     </div>
     <div class="question-shell">
@@ -195,15 +178,13 @@
     <p class="footer-note">Kein Login · Kein API-Key · Einfach spielen</p>
   </div>
 <script>
-const questions = {"eisbrecher":["Wenn du für einen Tag eine berühmte Person sein könntest, wer wäre das?","Was ist dein Lieblingsgeräusch auf der Welt?","Welches Talent hättest du gerne, das du nicht hast?","Was war dein Lieblingsspielzeug als Kind?","Wenn du einen Superhelden-Namen bräuchtest, wie würde er lauten?","Was ist das erste, was du morgens machst?","Welches Land willst du unbedingt noch bereisen?","Was ist dein Comfort-Food, wenn es dir mal nicht so gut geht?","Wenn du ein Tier wärst, welches wäre es und warum?","Was war dein bester Urlaub bisher?","Welche App nutzt du am meisten auf deinem Handy?","Was ist deine Lieblingsjahreszeit und warum?","Wenn du einen Tag nicht sprechen dürftest, wie würdest du kommunizieren?","Was war das letzte Buch, das du gelesen hast?","Welche Serie hast du zuletzt gebinged?"],"fun":["Wenn Tiere sprechen könnten, welches wäre am nervigsten?","Was wäre die schlechteste Superkraft, die man haben könnte?","Wenn du für einen Tag unsichtbar wärst, was würdest du tun?","Welches Essen würdest du niemals mit Ketchup essen?","Wenn dein Leben ein Film wäre, welcher Soundtrack würde im Hintergrund laufen?","Was wäre, wenn Menschen wie Katzen schnurren könnten, wenn sie glücklich sind?","Welches Wort klingt komisch, egal wie oft du es sagst?","Wenn du einen Tag lang ein Gegenstand in deiner Wohnung sein müsstest, welcher?","Was wäre dein Künstlername, wenn du Rapper wärst?","Wenn Tiere Klamotten tragen müssten, welches Tier würde am schlechtesten angezogen sein?","Was wäre die lustigste Ausrede, um zu spät zur Arbeit zu kommen?","Wenn du eine Fernbedienung für dein Leben hättest, welche Taste würdest du am meisten benutzen?","Welches Fabelwesen würde am ehesten in einer WG mit dir klarkommen?","Wenn dein Haustier (oder Wunsch-Haustier) einen Instagram-Account hätte, was würde es posten?","Was wäre der schlimmste Name für ein Restaurant?"],"waeredu":["Würdest du lieber für immer nur flüstern oder nur schreien können?","Würdest du lieber nie wieder Pizza essen oder nie wieder Schokolade essen?","Würdest du lieber die Zukunft sehen oder die Vergangenheit ändern können?","Würdest du lieber ohne Musik oder ohne Filme leben?","Würdest du lieber immer 10 Minuten zu früh oder immer 10 Minuten zu spät sein?","Würdest du lieber fliegen können oder unsichtbar sein?","Würdest du lieber jeden Tag dasselbe Essen oder nie wieder dein Lieblingsessen essen?","Würdest du lieber für immer im Sommer oder für immer im Winter leben?","Würdest du lieber deine Gedanken lesen lassen oder Gedanken anderer lesen können?","Würdest du lieber ein Leben lang reisen oder ein Leben lang an einem Ort wohnen?","Würdest du lieber ohne Handy oder ohne Auto leben?","Würdest du lieber immer die Wahrheit sagen müssen oder nie wieder reden können?","Würdest du lieber reich und unbekannt oder berühmt und mittelmäßig verdienend sein?","Würdest du lieber im Meer oder in den Bergen leben?","Würdest du lieber jeden Tag joggen gehen müssen oder nie wieder Sport machen dürfen?"],"peinlich":["Was ist die peinlichste Autokorrektur-Panne, die dir je passiert ist?","Wobei haben dich deine Eltern am peinlichsten erwischt?","Was ist das Peinlichste, das du auf einer ersten Verabredung gemacht hast?","Welche Lüge hast du als Kind erzählt, die richtig eskaliert ist?","Wann hast du zuletzt jemanden falsch gegrüßt (Winken statt Handschlag etc.)?","Was ist dir schon mal in der Öffentlichkeit peinlich Berühmtes passiert?","Welches Lied hast du heimlich schon oft laut mitgesungen, wenn niemand da war?","Wann hast du zuletzt jemanden mit dem falschen Namen angesprochen?","Was war deine peinlichste Modephase?","Welche Nachricht hast du schon mal versehentlich an die falsche Person geschickt?","Was ist das Peinlichste, das dir in der Schule passiert ist?","Wann bist du zuletzt vor anderen gestolpert oder hingefallen?","Welches Geheimnis über dich würde die meisten überraschen?","Was hast du schon mal gemacht, in der Annahme, niemand sieht dich – und wurdest erwischt?","Welchen peinlichen Spitznamen hattest du mal?"],"beziehung":["Was schätzt du am meisten an unserer Freundschaft?","Welche Erinnerung mit mir/uns wirst du nie vergessen?","Was war der Moment, in dem du gemerkt hast, dass wir gute Freunde sind?","Was würdest du dir wünschen, dass wir öfter zusammen machen?","Wie würdest du unsere Freundschaft in drei Worten beschreiben?","Was ist die beste Eigenschaft, die dir an einem guten Freund wichtig ist?","Was war das schönste gemeinsame Erlebnis, das wir hatten?","Was schätzt du an dir selbst, das du in einer Beziehung/Freundschaft einbringst?","Wie zeigst du am liebsten, dass dir jemand wichtig ist?","Was war der lustigste Moment, den wir zusammen erlebt haben?","Welche Eigenschaft an mir überrascht dich immer wieder positiv?","Was würdest du tun, wenn ein Freund/eine Freundin gerade Unterstützung braucht?","Was verbindet uns, das andere vielleicht nicht auf den ersten Blick sehen?","Welchen Rat würdest du einem guten Freund in einer schwierigen Zeit geben?","Was macht für dich eine gute, ehrliche Freundschaft aus?"],"tiefgruendig":["Was bereust du, wovon du noch nie jemandem erzählt hast?","Wenn du ein Jahr aus deinem Leben löschen müsstest, welches wäre es?","Was ist die größte Angst, die du je überwunden hast?","Welche Entscheidung hat dein Leben am meisten verändert?","Was würdest du deinem jüngeren Ich raten?","Wovor hast du am meisten Angst, wenn du an die Zukunft denkst?","Was bedeutet für dich ein erfülltes Leben?","Welchen Moment in deinem Leben würdest du gerne nochmal erleben?","Was hast du über dich selbst gelernt, das dich überrascht hat?","Wem hast du nie richtig verziehen und warum?","Was würdest du tun, wenn du wüsstest, dass du nicht scheitern kannst?","Welche Eigenschaft an dir möchtest du am liebsten ändern?","Was gibt deinem Leben gerade am meisten Sinn?","Wann hast du dich zuletzt wirklich verletzlich gefühlt?","Was ist der schwierigste Abschied gewesen, den du erlebt hast?"],"philosophisch":["Gibt es einen freien Willen, oder ist alles vorherbestimmt?","Was macht einen Menschen wirklich zu dem, der er ist?","Ist es besser, die Wahrheit zu wissen, auch wenn sie wehtut?","Kann man wahres Glück erreichen, ohne Leid erlebt zu haben?","Was bedeutet es, ein gutes Leben zu führen?","Ist Moral etwas Universelles oder von der Kultur abhängig?","Wenn niemand zusieht, ändert das, was richtig oder falsch ist?","Ist es wichtiger, glücklich oder bedeutungsvoll zu leben?","Kann künstliche Intelligenz jemals wirklich denken oder fühlen?","Was bleibt von einem Menschen, wenn seine Erinnerungen verschwinden?","Ist Zeit real oder nur eine menschliche Wahrnehmung?","Würdest du ewig leben wollen, wenn du könntest?","Ist Perfektion etwas, das man anstreben oder loslassen sollte?","Formt uns die Vergangenheit oder erschaffen wir sie im Rückblick neu?","Ist es möglich, jemanden vollständig zu verstehen, außer sich selbst?"],"team":["Was war dein bisher lustigstes Arbeitserlebnis?","Wenn du einen Skill sofort meistern könntest, welchen würdest du wählen?","Was motiviert dich an einem stressigen Arbeitstag am meisten?","Welches Talent hast du, das die wenigsten Kollegen kennen?","Was war dein bester erster Job?","Wenn unser Team ein Sportteam wäre, welche Sportart würden wir spielen?","Was ist dein produktivster Tipp für den Arbeitsalltag?","Welches Land würdest du gerne mal für die Arbeit besuchen?","Was war die verrückteste Idee, die am Ende richtig gut funktioniert hat?","Wenn du einen Arbeitstag komplett frei gestalten könntest, wie sähe er aus?","Was schätzt du am meisten an unserem Team?","Welche Fähigkeit würdest du gerne von einem Kollegen lernen?","Was war dein größtes Learning aus einem Projekt-Fail?","Wenn du CEO für einen Tag wärst, was würdest du sofort ändern?","Was hilft dir am besten, nach der Arbeit abzuschalten?"]};
-const catMeta = {"eisbrecher":{"emoji":"🧊","label":"Eisbrecher","g1":"#60a5fa","g2":"#818cf8","size":"tile"},"fun":{"emoji":"🤪","label":"Fun & Verrückt","g1":"#fbbf24","g2":"#fb7185","size":"tile"},"waeredu":{"emoji":"🔀","label":"Würdest du eher","g1":"#f472b6","g2":"#c084fc","size":"wide"},"peinlich":{"emoji":"😳","label":"Peinlich","g1":"#fb923c","g2":"#f43f5e","size":"tile"},"beziehung":{"emoji":"💬","label":"Beziehung","g1":"#a78bfa","g2":"#818cf8","size":"tile"},"tiefgruendig":{"emoji":"🌊","label":"Tiefgründig","g1":"#2dd4bf","g2":"#3b82f6","size":"wide"},"philosophisch":{"emoji":"🧠","label":"Philosophisch","g1":"#6366f1","g2":"#8b5cf6","size":"tile"},"team":{"emoji":"💼","label":"Team & Arbeit","g1":"#34d399","g2":"#22d3ee","size":"tile"}};
+const questions = {"eisbrecher":["Wenn du für einen Tag eine berühmte Person sein könntest, wer wäre das?","Was ist dein Lieblingsgeräusch auf der Welt?","Welches Talent hättest du gerne, das du nicht hast?","Was war dein Lieblingsspielzeug als Kind?","Wenn du einen Superhelden-Namen bräuchtest, wie würde er lauten?","Was ist das erste, was du morgens machst?","Welches Land willst du unbedingt noch bereisen?","Was ist dein Comfort-Food, wenn es dir mal nicht so gut geht?","Wenn du ein Tier wärst, welches wäre es und warum?","Was war dein bester Urlaub bisher?","Welche App nutzt du am meisten auf deinem Handy?","Was ist deine Lieblingsjahreszeit und warum?","Wenn du einen Tag nicht sprechen dürftest, wie würdest du kommunizieren?","Was war das letzte Buch, das du gelesen hast?","Welche Serie hast du zuletzt gebinged?"],"fun":["Wenn Tiere sprechen könnten, welches wäre am nervigsten?","Was wäre die schlechteste Superkraft, die man haben könnte?","Wenn du für einen Tag unsichtbar wärst, was würdest du tun?","Welches Essen würdest du niemals mit Ketchup essen?","Wenn dein Leben ein Film wäre, welcher Soundtrack würde im Hintergrund laufen?","Was wäre, wenn Menschen wie Katzen schnurren könnten, wenn sie glücklich sind?","Welches Wort klingt komisch, egal wie oft du es sagst?","Wenn du einen Tag lang ein Gegenstand in deiner Wohnung sein müsstest, welcher?","Was wäre dein Künstlername, wenn du Rapper wärst?","Wenn Tiere Klamotten tragen müssten, welches Tier würde am schlechtesten angezogen sein?","Was wäre die lustigste Ausrede, um zu spät zur Arbeit zu kommen?","Wenn du eine Fernbedienung für dein Leben hättest, welche Taste würdest du am meisten benutzen?","Welches Fabelwesen würde am ehesten in einer WG mit dir klarkommen?","Wenn dein Haustier (oder Wunsch-Haustier) einen Instagram-Account hätte, was würde es posten?","Was wäre der schlimmste Name für ein Restaurant?"],"waeredu":["Würdest du lieber für immer nur flüstern oder nur schreien können?","Würdest du lieber nie wieder Pizza essen oder nie wieder Schokolade essen?","Würdest du lieber die Zukunft sehen oder die Vergangenheit ändern können?","Würdest du lieber ohne Musik oder ohne Filme leben?","Würdest du lieber immer 10 Minuten zu früh oder immer 10 Minuten zu spät sein?","Würdest du lieber fliegen können oder unsichtbar sein?","Würdest du lieber jeden Tag dasselbe Essen oder nie wieder dein Lieblingsessen essen?","Würdest du lieber für immer im Sommer oder für immer im Winter leben?","Würdest du lieber deine Gedanken lesen lassen oder Gedanken anderer lesen können?","Würdest du lieber ein Leben lang reisen oder ein Leben lang an einem Ort wohnen?","Würdest du lieber ohne Handy oder ohne Auto leben?","Würdest du lieber immer die Wahrheit sagen müssen oder nie wieder reden können?","Würdest du lieber reich und unbekannt oder berühmt und mittelmäßig verdienend sein?","Würdest du lieber im Meer oder in den Bergen leben?","Würdest du lieber jeden Tag joggen gehen müssen oder nie wieder Sport machen dürfen?"],"peinlich":["Was ist die peinlichste Autokorrektur-Panne, die dir je passiert ist?","Wobei haben dich deine Eltern am peinlichsten erwischt?","Was ist das Peinlichste, das du auf einer ersten Verabredung gemacht hast?","Welche Lüge hast du als Kind erzählt, die richtig eskaliert ist?","Wann hast du zuletzt jemanden falsch gegrüßt (Winken statt Handschlag etc.)?","Was ist dir schon mal in der Öffentlichkeit peinlich Berühmtes passiert?","Welches Lied hast du heimlich schon oft laut mitgesungen, wenn niemand da war?","Wann hast du zuletzt jemanden mit dem falschen Namen angesprochen?","Was war deine peinlichste Modephase?","Welche Nachricht hast du schon mal versehentlich an die falsche Person geschickt?","Was ist das Peinlichste, das dir in der Schule passiert ist?","Wann bist du zuletzt vor anderen gestolpert oder hingefallen?","Welches Geheimnis über dich würde die meisten überraschen?","Was hast du schon mal gemacht, in der Annahme, niemand sieht dich – und wurdest erwischt?","Welchen peinlichen Spitznamen hattest du mal?"],"beziehung":["Was schätzt du am meisten an unserer Freundschaft?","Welche Erinnerung mit mir/uns wirst du nie vergessen?","Was war der Moment, in dem du gemerkt hast, dass wir gute Freunde sind?","Was würdest du dir wünschen, dass wir öfter zusammen machen?","Wie würdest du unsere Freundschaft in drei Worten beschreiben?","Was ist die beste Eigenschaft, die dir an einem guten Freund wichtig ist?","Was war das schönste gemeinsame Erlebnis, das wir hatten?","Was schätzt du an dir selbst, das du in einer Beziehung/Freundschaft einbringst?","Wie zeigst du am liebsten, dass dir jemand wichtig ist?","Was war der lustigste Moment, den wir zusammen erlebt haben?","Welche Eigenschaft an mir überrascht dich immer wieder positiv?","Was würdest du tun, wenn ein Freund/eine Freundin gerade Unterstützung braucht?","Was verbindet uns, das andere vielleicht nicht auf den ersten Blick sehen?","Welchen Rat würdest du einem guten Freund in einer schwierigen Zeit geben?","Was macht für dich eine gute, ehrliche Freundschaft aus?"],"tiefgruendig":["Was bereust du, wovon du noch nie jemandem erzählt hast?","Wenn du ein Jahr aus deinem Leben löschen müsstest, welches wäre es?","Was ist die größte Angst, die du je überwunden hast?","Welche Entscheidung hat dein Leben am meisten verändert?","Was würdest du deinem jüngeren Ich raten?","Wovor hast du am meisten Angst, wenn du an die Zukunft denkst?","Was bedeutet für dich ein erfülltes Leben?","Welchen Moment in deinem Leben würdest du gerne nochmal erleben?","Was hast du über dich selbst gelernt, das dich überrascht hat?","Wem hast du nie richtig verziehen und warum?","Was würdest du tun, wenn du wüsstest, dass du nicht scheitern kannst?","Welche Eigenschaft an dir möchtest du am liebsten ändern?","Was gibt deinem Leben gerade am meisten Sinn?","Wann hast du dich zuletzt wirklich verletzlich gefühlt?","Was ist der schwierigste Abschied gewesen, den du erlebt hast?"],"philosophisch":["Gibt es einen freien Willen, oder ist alles vorherbestimmt?","Was macht einen Menschen wirklich zu dem, der er ist?","Ist es besser, die Wahrheit zu wissen, auch wenn sie wehtut?","Kann man wahres Glück erreichen, ohne Leid erlebt zu haben?","Was bedeutet es, ein gutes Leben zu führen?","Ist Moral etwas Universelles oder von der Kultur abhängig?","Wenn niemand zusieht, ändert das, was richtig oder falsch ist?","Ist es wichtiger, glücklich oder bedeutungsvoll zu leben?","Kann künstliche Intelligenz jemals wirklich denken oder fühlen?","Was bleibt von einem Menschen, wenn seine Erinnerungen verschwinden?","Ist Zeit real oder nur eine menschliche Wahrnehmung?","Würdest du ewig leben wollen, wenn du könntest?","Ist Perfektion etwas, das man anstreben oder loslassen sollte?","Formt uns die Vergangenheit oder erschaffen wir sie im Rückblick neu?","Ist es möglich, jemanden vollständig zu verstehen, außer sich selbst?"]};
+const catMeta = {"eisbrecher":{"emoji":"🧊","label":"Eisbrecher","g1":"#60a5fa","g2":"#818cf8"},"fun":{"emoji":"🤪","label":"Fun & Verrückt","g1":"#fbbf24","g2":"#fb7185"},"waeredu":{"emoji":"🔀","label":"Würdest du eher","g1":"#f472b6","g2":"#c084fc"},"peinlich":{"emoji":"😳","label":"Peinlich","g1":"#fb923c","g2":"#f43f5e"},"beziehung":{"emoji":"💬","label":"Beziehung","g1":"#a78bfa","g2":"#818cf8"},"tiefgruendig":{"emoji":"🌊","label":"Tiefgründig","g1":"#2dd4bf","g2":"#3b82f6"},"philosophisch":{"emoji":"🧠","label":"Philosophisch","g1":"#6366f1","g2":"#8b5cf6"}};
 
 let currentCategory = 'eisbrecher';
-let streak = 0;
 let usedIndexes = {};
 
 const questionBox = document.getElementById('questionBox');
-const streakCount = document.getElementById('streakCount');
 const cardTag = document.getElementById('cardTag');
 
 document.querySelectorAll('.cat-card').forEach(btn => {
@@ -231,9 +212,6 @@ function getQuestion() {
   while (questionBox.childNodes.length > 1) questionBox.removeChild(questionBox.lastChild);
   questionBox.appendChild(document.createTextNode(list[idx]));
   questionBox.classList.add('pop');
-
-  streak += 1;
-  streakCount.textContent = streak;
 }
 </script>
 </body>
